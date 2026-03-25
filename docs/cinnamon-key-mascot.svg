@@ -1,0 +1,31 @@
+<svg width="640" height="320" viewBox="0 0 640 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="320" rx="32" fill="#09111F"/>
+  <circle cx="132" cy="160" r="96" fill="url(#glow)"/>
+  <circle cx="132" cy="160" r="82" fill="#1A273F" stroke="#3A4C72" stroke-width="2"/>
+  <path d="M88 168C88 138.176 112.176 114 142 114C171.824 114 196 138.176 196 168C196 197.824 171.824 222 142 222C112.176 222 88 197.824 88 168Z" fill="#8B5E3C"/>
+  <path d="M109 168C109 149.774 123.774 135 142 135C160.226 135 175 149.774 175 168C175 186.226 160.226 201 142 201C123.774 201 109 186.226 109 168Z" fill="#C28653"/>
+  <path d="M125 168C125 158.611 132.611 151 142 151C151.389 151 159 158.611 159 168C159 177.389 151.389 185 142 185C132.611 185 125 177.389 125 168Z" fill="#F0D2B0"/>
+  <circle cx="134" cy="159" r="4.5" fill="#0B1322"/>
+  <circle cx="153" cy="159" r="4.5" fill="#0B1322"/>
+  <path d="M136 177C140.667 181 146 181 151 177" stroke="#0B1322" stroke-width="4" stroke-linecap="round"/>
+  <path d="M95 113C103 92 118 78 140 71" stroke="#6E452B" stroke-width="12" stroke-linecap="round"/>
+  <path d="M109 109C116 92 128 81 147 76" stroke="#A46A42" stroke-width="8" stroke-linecap="round"/>
+  <rect x="238" y="66" width="338" height="188" rx="28" fill="#111A2E" stroke="#253555"/>
+  <rect x="266" y="100" width="76" height="76" rx="22" fill="#0E2534" stroke="#1F6682"/>
+  <path d="M304 116C312.45 122.575 321.55 125.4 329 125.4V140.753C329 155.785 318.937 169.255 304 174.6C289.063 169.255 279 155.785 279 140.753V125.4C286.45 125.4 295.55 122.575 304 116Z" stroke="#27C1ED" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M380 120H528" stroke="#304264" stroke-width="10" stroke-linecap="round"/>
+  <path d="M380 153H554" stroke="#1E9BC0" stroke-width="12" stroke-linecap="round"/>
+  <path d="M380 188H508" stroke="#304264" stroke-width="10" stroke-linecap="round"/>
+  <path d="M380 219H470" stroke="#304264" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="530" cy="220" r="20" fill="#18243E" stroke="#304264"/>
+  <path d="M521 220H539" stroke="#27C1ED" stroke-width="4" stroke-linecap="round"/>
+  <path d="M530 211V229" stroke="#27C1ED" stroke-width="4" stroke-linecap="round"/>
+  <text x="240" y="286" fill="#E7EEF9" font-family="Avenir Next, Segoe UI, sans-serif" font-size="38" font-weight="700">Cinnamon Key</text>
+  <text x="442" y="286" fill="#7C91B6" font-family="Avenir Next, Segoe UI, sans-serif" font-size="20">local vault mascot</text>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(132 160) rotate(90) scale(96)">
+      <stop stop-color="#1E9BC0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#1E9BC0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
