@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import Login from '../pages/auth/Login.vue'
 import Register from '../pages/auth/Register.vue'
 import Dashboard from '../pages/dashboard/Dashboard.vue'
@@ -34,8 +34,10 @@ const routes = [
   }
 ]
 
+const isDesktopBuild = window.location.protocol === 'file:'
+
 const router = createRouter({
-  history: createWebHistory(),
+  history: isDesktopBuild ? createWebHashHistory() : createWebHistory(),
   routes
 })
 

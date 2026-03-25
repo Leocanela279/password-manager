@@ -16,7 +16,7 @@ importers:
         version: 6.0.1
     devDependencies:
       electron:
-        specifier: ^29.1.5
+        specifier: ^29.4.6
         version: 29.4.6
       electron-builder:
         specifier: ^24.13.3

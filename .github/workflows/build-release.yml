@@ -1,0 +1,91 @@
+name: Build Cinnamon Key
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: |
+            frontend/pnpm-lock.yaml
+            desktop/pnpm-lock.yaml
+
+      - name: Install frontend dependencies
+        run: pnpm install
+        working-directory: frontend
+
+      - name: Install desktop dependencies
+        run: pnpm install
+        working-directory: desktop
+
+      - name: Build macOS artifacts
+        run: pnpm run dist:mac
+        working-directory: desktop
+
+      - name: Upload macOS artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cinnamon-key-macos
+          path: |
+            desktop/dist/*.dmg
+            desktop/dist/*.zip
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: |
+            frontend/pnpm-lock.yaml
+            desktop/pnpm-lock.yaml
+
+      - name: Install frontend dependencies
+        run: pnpm install
+        working-directory: frontend
+
+      - name: Install desktop dependencies
+        run: pnpm install
+        working-directory: desktop
+
+      - name: Build Windows artifacts
+        run: pnpm run dist:win
+        working-directory: desktop
+
+      - name: Upload Windows artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cinnamon-key-windows
+          path: |
+            desktop/dist/*.exe
+            desktop/dist/*.nsis.7z
+            desktop/dist/latest*.yml

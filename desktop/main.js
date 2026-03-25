@@ -5,17 +5,25 @@ const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 
 let db;
+const isDev = !app.isPackaged;
 
 function createWindow () {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1280,
+    height: 860,
+    minWidth: 1080,
+    minHeight: 720,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   });
 
-  win.loadURL('http://localhost:5173');
+  if (isDev) {
+    win.loadURL('http://localhost:5173');
+    return;
+  }
+
+  win.loadFile(path.join(__dirname, 'renderer', 'index.html'));
 }
 
 ipcMain.handle('auth:register', async (event, { username, email, password }) => {
