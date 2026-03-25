@@ -24,6 +24,7 @@
   "build": {
     "appId": "com.cinnamonkey.app",
     "productName": "Cinnamon Key",
+    "afterPack": "scripts/afterPack.js",
     "directories": {
       "output": "dist",
       "buildResources": "build"
