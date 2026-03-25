@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/cinnamon-key-logo.png" alt="Cinnamon Key logo" width="720" />
+  <img src="./docs/cinnamon-key-logo.png" alt="Cinnamon Key logo" width="400"  />
 </p>
 
 <h1 align="center">Cinnamon Key</h1>
